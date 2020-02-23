@@ -1,0 +1,723 @@
+[
+  {
+    "name": "Lancet-2",
+    "tags": [
+      "Ranged",
+      "Healing",
+      "Medic",
+      "Robot"
+    ],
+    "stars": 1
+  },
+  {
+    "name": "Castle-3",
+    "tags": [
+      "Melee",
+      "Support",
+      "Guard",
+      "Robot"
+    ],
+    "stars": 1
+  },
+  {
+    "name": "Yato",
+    "tags": [
+      "Melee",
+      "Starter",
+      "Vanguard"
+    ],
+    "stars": 2
+  },
+  {
+    "name": "Durin",
+    "tags": [
+      "Ranged",
+      "Starter",
+      "Caster"
+    ],
+    "stars": 2
+  },
+  {
+    "name": "12F",
+    "tags": [
+      "Ranged",
+      "Starter",
+      "Caster"
+    ],
+    "stars": 2
+  },
+  {
+    "name": "Rangers",
+    "tags": [
+      "Ranged",
+      "Starter",
+      "Sniper"
+    ],
+    "stars": 2
+  },
+  {
+    "name": "Noir Corne",
+    "tags": [
+      "Melee",
+      "Starter",
+      "Defender"
+    ],
+    "stars": 2
+  },
+  {
+    "name": "Fang",
+    "tags": [
+      "Melee",
+      "DP-Revoery",
+      "Vanguard"
+    ],
+    "stars": 3
+  },
+  {
+    "name": "Vanilla",
+    "tags": [
+      "Melee",
+      "DP-Revoery",
+      "Vanguard"
+    ],
+    "stars": 3
+  },
+  {
+    "name": "Plume",
+    "tags": [
+      "Melee",
+      "DPS",
+      "DP-Revoery",
+      "Vanguard"
+    ],
+    "stars": 3
+  },
+  {
+    "name": "Hibiscus",
+    "tags": [
+      "Ranged",
+      "Healing",
+      "Medic"
+    ],
+    "stars": 3
+  },
+  {
+    "name": "Ansel",
+    "tags": [
+      "Ranged",
+      "Healing",
+      "Medic"
+    ],
+    "stars": 3
+  },
+  {
+    "name": "Lava",
+    "tags": [
+      "Ranged",
+      "AoE",
+      "Caster"
+    ],
+    "stars": 3
+  },
+  {
+    "name": "Steward",
+    "tags": [
+      "Ranged",
+      "DPS",
+      "Caster"
+    ],
+    "stars": 3
+  },
+  {
+    "name": "Kroos",
+    "tags": [
+      "Ranged",
+      "DPS",
+      "Sniper"
+    ],
+    "stars": 3
+  },
+  {
+    "name": "Adnachiel",
+    "tags": [
+      "Ranged",
+      "DPS",
+      "Sniper"
+    ],
+    "stars": 3
+  },
+  {
+    "name": "Orchid",
+    "tags": [
+      "Ranged",
+      "Slow",
+      "Supporter"
+    ],
+    "stars": 3
+  },
+  {
+    "name": "Melantha",
+    "tags": [
+      "Melee",
+      "DPS",
+      "Survival",
+      "Guard"
+    ],
+    "stars": 3
+  },
+  {
+    "name": "Beagle",
+    "tags": [
+      "Melee",
+      "Defense",
+      "Defender"
+    ],
+    "stars": 3
+  },
+  {
+    "name": "Scavenger",
+    "tags": [
+      "Melee",
+      "DP-Revoery",
+      "DPS",
+      "Vanguard"
+    ],
+    "stars": 4
+  },
+  {
+    "name": "Vigna",
+    "tags": [
+      "Melee",
+      "DPS",
+      "DP-Revoery",
+      "Vanguard"
+    ],
+    "stars": 4
+  },
+  {
+    "name": "Myrrh",
+    "tags": [
+      "Ranged",
+      "Healing",
+      "Medic"
+    ],
+    "stars": 4
+  },
+  {
+    "name": "Perfumer",
+    "tags": [
+      "Ranged",
+      "Healing",
+      "Medic"
+    ],
+    "stars": 4
+  },
+  {
+    "name": "Haze",
+    "tags": [
+      "Debuff",
+      "Ranged",
+      "DPS",
+      "Caster"
+    ],
+    "stars": 4
+  },
+  {
+    "name": "Gitano",
+    "tags": [
+      "Ranged",
+      "AoE",
+      "Caster"
+    ],
+    "stars": 4
+  },
+  {
+    "name": "Gravel",
+    "tags": [
+      "Melee",
+      "Fast-Redeploy",
+      "Defense",
+      "Specialist"
+    ],
+    "stars": 4
+  },
+  {
+    "name": "Rope",
+    "tags": [
+      "Melee",
+      "Shift",
+      "Specialist"
+    ],
+    "stars": 4
+  },
+  {
+    "name": "Shaw",
+    "tags": [
+      "Melee",
+      "Shift",
+      "Specialist"
+    ],
+    "stars": 4
+  },
+  {
+    "name": "ShiraYuki",
+    "tags": [
+      "Ranged",
+      "AoE",
+      "Slow",
+      "Sniper"
+    ],
+    "stars": 4
+  },
+  {
+    "name": "Meteor",
+    "tags": [
+      "Ranged",
+      "DPS",
+      "Debuff",
+      "Sniper"
+    ],
+    "stars": 4
+  },
+  {
+    "name": "Jessica",
+    "tags": [
+      "Ranged",
+      "DPS",
+      "Survival",
+      "Sniper"
+    ],
+    "stars": 4
+  },
+  {
+    "name": "Earthspirit",
+    "tags": [
+      "Ranged",
+      "Slow",
+      "Supporter"
+    ],
+    "stars": 4
+  },
+  {
+    "name": "Dobermann",
+    "tags": [
+      "Melee",
+      "Support",
+      "DPS",
+      "Guard"
+    ],
+    "stars": 4
+  },
+  {
+    "name": "Estelle",
+    "tags": [
+      "Melee",
+      "AoE",
+      "Survival",
+      "Guard"
+    ],
+    "stars": 4
+  },
+  {
+    "name": "Mousse",
+    "tags": [
+      "Melee",
+      "DPS",
+      "Guard"
+    ],
+    "stars": 4
+  },
+  {
+    "name": "Frostleaf",
+    "tags": [
+      "Melee",
+      "Slow",
+      "DPS",
+      "Guard"
+    ],
+    "stars": 4
+  },
+  {
+    "name": "Matoimaru",
+    "tags": [
+      "DPS",
+      "Melee",
+      "Survival",
+      "Guard"
+    ],
+    "stars": 4
+  },
+  {
+    "name": "Cuora",
+    "tags": [
+      "Melee",
+      "Defense",
+      "Defender"
+    ],
+    "stars": 4
+  },
+  {
+    "name": "ГУМ",
+    "tags": [
+      "Melee",
+      "Defense",
+      "Healing",
+      "Defender"
+    ],
+    "stars": 4
+  },
+  {
+    "name": "Matterhorn",
+    "tags": [
+      "Melee",
+      "Defense",
+      "Defender"
+    ],
+    "stars": 4
+  },
+  {
+    "name": "Texas",
+    "tags": [
+      "Crowdcontrol",
+      "Melee",
+      "DP-Revoery",
+      "Senior Operator",
+      "Vanguard"
+    ],
+    "stars": 5
+  },
+  {
+    "name": "зима",
+    "tags": [
+      "Support",
+      "Melee",
+      "DP-Revoery",
+      "Senior Operator",
+      "Vanguard"
+    ],
+    "stars": 5
+  },
+  {
+    "name": "Ptilopsis",
+    "tags": [
+      "Ranged",
+      "Healing",
+      "Support",
+      "Senior Operator",
+      "Medic"
+    ],
+    "stars": 5
+  },
+  {
+    "name": "Silence",
+    "tags": [
+      "Ranged",
+      "Healing",
+      "Senior Operator",
+      "Medic"
+    ],
+    "stars": 5
+  },
+  {
+    "name": "Warfarin",
+    "tags": [
+      "Ranged",
+      "Healing",
+      "Support",
+      "Senior Operator",
+      "Medic"
+    ],
+    "stars": 5
+  },
+  {
+    "name": "Projekt Red",
+    "tags": [
+      "Melee",
+      "Crowdcontrol",
+      "Fast-Redeploy",
+      "Senior Operator",
+      "Specialist"
+    ],
+    "stars": 5
+  },
+  {
+    "name": "Manticore",
+    "tags": [
+      "Survival",
+      "Melee",
+      "DPS",
+      "Senior Operator",
+      "Specialist"
+    ],
+    "stars": 5
+  },
+  {
+    "name": "Cliffheart",
+    "tags": [
+      "DPS",
+      "Melee",
+      "Shift",
+      "Senior Operator",
+      "Specialist"
+    ],
+    "stars": 5
+  },
+  {
+    "name": "FEater",
+    "tags": [
+      "Slow",
+      "Melee",
+      "Shift",
+      "Senior Operator",
+      "Specialist"
+    ],
+    "stars": 5
+  },
+  {
+    "name": "Provence",
+    "tags": [
+      "Ranged",
+      "DPS",
+      "Senior Operator",
+      "Sniper"
+    ],
+    "stars": 5
+  },
+  {
+    "name": "Blue Poison",
+    "tags": [
+      "Ranged",
+      "DPS",
+      "Senior Operator",
+      "Sniper"
+    ],
+    "stars": 5
+  },
+  {
+    "name": "Firewatch",
+    "tags": [
+      "Ranged",
+      "DPS",
+      "Nuker",
+      "Senior Operator",
+      "Sniper"
+    ],
+    "stars": 5
+  },
+  {
+    "name": "Meteorite",
+    "tags": [
+      "Ranged",
+      "AoE",
+      "Debuff",
+      "Senior Operator",
+      "Sniper"
+    ],
+    "stars": 5
+  },
+  {
+    "name": "Platinum",
+    "tags": [
+      "Ranged",
+      "DPS",
+      "Senior Operator",
+      "Sniper"
+    ],
+    "stars": 5
+  },
+  {
+    "name": "Pramanix",
+    "tags": [
+      "Ranged",
+      "Debuff",
+      "Senior Operator",
+      "Supporter"
+    ],
+    "stars": 5
+  },
+  {
+    "name": "Истина",
+    "tags": [
+      "Ranged",
+      "Slow",
+      "DPS",
+      "Senior Operator",
+      "Supporter"
+    ],
+    "stars": 5
+  },
+  {
+    "name": "Mayer",
+    "tags": [
+      "Ranged",
+      "Summon",
+      "Crowdcontrol",
+      "Senior Operator",
+      "Supporter"
+    ],
+    "stars": 5
+  },
+  {
+    "name": "Specter",
+    "tags": [
+      "Melee",
+      "AoE",
+      "Survival",
+      "Senior Operator",
+      "Guard"
+    ],
+    "stars": 5
+  },
+  {
+    "name": "Indra",
+    "tags": [
+      "Melee",
+      "DPS",
+      "Survival",
+      "Senior Operator",
+      "Guard"
+    ],
+    "stars": 5
+  },
+  {
+    "name": "Nearl",
+    "tags": [
+      "Melee",
+      "Defense",
+      "Healing",
+      "Senior Operator",
+      "Defender"
+    ],
+    "stars": 5
+  },
+  {
+    "name": "Liskarm",
+    "tags": [
+      "Melee",
+      "Defense",
+      "DPS",
+      "Senior Operator",
+      "Defender"
+    ],
+    "stars": 5
+  },
+  {
+    "name": "Vulcan",
+    "tags": [
+      "Melee",
+      "DPS",
+      "Defense",
+      "Survival",
+      "Senior Operator",
+      "Defender"
+    ],
+    "stars": 5
+  },
+  {
+    "name": "Croissant",
+    "tags": [
+      "Melee",
+      "Shift",
+      "Defense",
+      "Senior Operator",
+      "Defender"
+    ],
+    "stars": 5
+  },
+  {
+    "name": "Siege",
+    "tags": [
+      "Melee",
+      "DP-Revoery",
+      "DPS",
+      "Senior Operator",
+      "Top Operator",
+      "Vanguard"
+    ],
+    "stars": 6
+  },
+  {
+    "name": "Shining",
+    "tags": [
+      "Ranged",
+      "Support",
+      "Healing",
+      "Senior Operator",
+      "Top Operator",
+      "Medic"
+    ],
+    "stars": 6
+  },
+  {
+    "name": "Nightingale",
+    "tags": [
+      "Ranged",
+      "Healing",
+      "Support",
+      "Senior Operator",
+      "Top Operator",
+      "Medic"
+    ],
+    "stars": 6
+  },
+  {
+    "name": "Ifrit",
+    "tags": [
+      "Ranged",
+      "AoE",
+      "Debuff",
+      "Senior Operator",
+      "Top Operator",
+      "Caster"
+    ],
+    "stars": 6
+  },
+  {
+    "name": "Exusiai",
+    "tags": [
+      "Ranged",
+      "DPS",
+      "Senior Operator",
+      "Top Operator",
+      "Sniper"
+    ],
+    "stars": 6
+  },
+  {
+    "name": "SilverAsh",
+    "tags": [
+      "Melee",
+      "DPS",
+      "Support",
+      "Senior Operator",
+      "Top Operator",
+      "Guard"
+    ],
+    "stars": 6
+  },
+  {
+    "name": "Hoshiguma",
+    "tags": [
+      "Melee",
+      "DPS",
+      "Defense",
+      "Senior Operator",
+      "Top Operator",
+      "Defender"
+    ],
+    "stars": 6
+  },
+  {
+    "name": "Saria",
+    "tags": [
+      "Melee",
+      "Support",
+      "Defense",
+      "Healing",
+      "Senior Operator",
+      "Top Operator",
+      "Defender"
+    ],
+    "stars": 6
+  }
+]
