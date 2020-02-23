@@ -157,7 +157,7 @@ function cleanUp() {
 function loadRawFile() {
   console.log('Reading file');
 
-  let buffer = fs.readFileSync('./public/operators_raw.json');
+  let buffer = fs.readFileSync('./public/data/operators_raw.json');
   let json = buffer.toString();
 
   let operatorsRaw = JSON.parse(json);
@@ -168,8 +168,8 @@ function loadRawFile() {
 function saveOperatorsJson(operators) {
   console.log(`Saving ${operators.length} operators' info to file.`);
 
-  fs.writeFileSync('./public/operators.json', JSON.stringify(operators, null, 2));
-  fs.writeFileSync('./public/operators-min.json', JSON.stringify(operators));  
+  fs.writeFileSync('./public/data/operators.json', JSON.stringify(operators, null, 2));
+  fs.writeFileSync('./public/data/operators-min.json', JSON.stringify(operators));  
 }
 
 function translateTags(tags) {

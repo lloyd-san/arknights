@@ -52,14 +52,14 @@ class App extends PureComponent {
     super(props, context);
 
     this.state = {
-      operators: null,
+      operators: [],
 
       selectedTags: []
     };
   }
 
   componentDidMount() {
-    fetch('/operators.json')
+    fetch('./data/operators-min.json')
       .then(response => {
         if (!response.ok) {
           throw new Error();
@@ -70,7 +70,7 @@ class App extends PureComponent {
       .then(result => {
         this.setState({ operators: result });
       })
-      .catch(() => {
+      .catch(err => {
         alert('Error when fetching operators data.');
       })
   }
