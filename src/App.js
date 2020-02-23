@@ -54,7 +54,8 @@ class App extends PureComponent {
     this.state = {
       operators: [],
 
-      selectedTags: []
+      selectedTags: [],
+      calculateOperators: []
     };
   }
 
@@ -89,7 +90,34 @@ class App extends PureComponent {
   }
 
   calculateOperators = () => {
+    let operators = this.state.operators;
+    let selectedTags = this.state.selectedTags;
+
+    let tagCombinations = permutations(selectedTags);
     
+    let results = [];
+    tagCombinations.forEach(combination => {
+      let combinationOperators = operators.filter(op => {
+        for (let i = 0; i < combination.length; i++) {
+          if (!op.tags.includes(combination[i])) {
+            return false;
+          }
+        }
+
+        return true;
+      });
+
+      let combinationResults = {
+        name: combination.join(' + '),
+        operators: combinationOperators
+      };
+
+      results.push(combinationResults);
+    });
+
+    this.setState({ calculateOperators: results });
+
+    console.log(JSON.stringify(results));
   }
 
   render() {
@@ -106,7 +134,7 @@ class App extends PureComponent {
                   {
                     TAGS.map(tagCategory => {
                       return (
-                        <TableRow>
+                        <TableRow key={tagCategory.name}>
                           <TableCell className='tags-table-cell tags-table-category'>
                             {tagCategory.name}
                           </TableCell>
@@ -115,6 +143,7 @@ class App extends PureComponent {
                               tagCategory.tags.map(tag => {
                                 return (
                                   <Button 
+                                    key={tag}
                                     className='tag-button' 
                                     variant={this.state.selectedTags.includes(tag) ? 'contained' : 'outlined'} 
                                     color='primary' 
@@ -132,15 +161,90 @@ class App extends PureComponent {
                   }    
                   </TableBody>
                 </Table>
-              </TableContainer>
-                        
+              </TableContainer>              
+            </div>
+            <div className='tags-area'>
+              <TableContainer>
+                <Table>
+                  <TableBody>
+                  {
+                    this.state.calculateOperators.map(combination => {
+                      if (combination.operators.length === 0) {
+                        return null;
+                      }
+
+                      return (
+                        <TableRow key={combination.name}>
+                          <TableCell className='tags-table-cell tags-table-category'>
+                            {combination.name}
+                          </TableCell>
+                          <TableCell className='tags-table-cell'>
+                            {
+                              combination.operators.map(op => {
+                                return (
+                                  <Button 
+                                    key={op.name}
+                                    className='tag-button' 
+                                    variant={'contained'} 
+                                    color='primary'
+                                  >
+                                    {op.name}
+                                  </Button>
+                                )
+                              })
+                            }
+                          </TableCell>                          
+                        </TableRow>
+                      );
+                    })
+                  }    
+                  </TableBody>
+                </Table>
+              </TableContainer>              
             </div>
           </div>
         </div>
-      </ThemeProvider>
-     
+      </ThemeProvider>     
     );
   }
+}
+
+function permutations(array) {
+  let permutations = [];
+
+  for (let i = 0; i < Math.pow(2, array.length); i++) {
+    let binary = (i >>> 0).toString(2);
+
+    let diff = array.length - binary.length;
+
+    binary = new Array(diff + 1).join('0') + binary;
+
+    let permutation = [];
+
+    for (let y = array.length - 1; y >= 0; y--) {
+      let b = binary[y];
+
+      if (b === '1') {
+        permutation.push(array[y]);
+      }
+    }
+
+    if (permutation.length > 0) {
+      permutations.push(permutation);
+    }
+  }
+
+  return permutations.sort((a, b) => {
+    if (a.length > b.length) {
+      return -1;
+    }
+    else if (a.length < b.length) {
+      return 1;
+    }
+    else {
+      return 0;
+    }
+  });
 }
 
 export default App;

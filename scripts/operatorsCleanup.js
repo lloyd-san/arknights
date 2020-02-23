@@ -113,7 +113,7 @@ const TAG_TRANSLATIONS = [
     chinese: '支援机械',
     english: 'Robot'
   }
-]
+];
 
 cleanUp();
 
