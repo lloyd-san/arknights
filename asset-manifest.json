@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/arknights/static/css/main.833452de.chunk.css",
+    "main.js": "/arknights/static/js/main.20f08be3.chunk.js",
+    "main.js.map": "/arknights/static/js/main.20f08be3.chunk.js.map",
+    "runtime-main.js": "/arknights/static/js/runtime-main.fe882b37.js",
+    "runtime-main.js.map": "/arknights/static/js/runtime-main.fe882b37.js.map",
+    "static/js/2.947517ca.chunk.js": "/arknights/static/js/2.947517ca.chunk.js",
+    "static/js/2.947517ca.chunk.js.map": "/arknights/static/js/2.947517ca.chunk.js.map",
+    "index.html": "/arknights/index.html",
+    "precache-manifest.9b98807619d2831ca206c22e5402375d.js": "/arknights/precache-manifest.9b98807619d2831ca206c22e5402375d.js",
+    "service-worker.js": "/arknights/service-worker.js",
+    "static/css/main.833452de.chunk.css.map": "/arknights/static/css/main.833452de.chunk.css.map",
+    "static/js/2.947517ca.chunk.js.LICENSE.txt": "/arknights/static/js/2.947517ca.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.fe882b37.js",
+    "static/js/2.947517ca.chunk.js",
+    "static/css/main.833452de.chunk.css",
+    "static/js/main.20f08be3.chunk.js"
+  ]
+}
