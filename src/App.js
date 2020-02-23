@@ -294,6 +294,29 @@ class App extends PureComponent {
               </TableContainer>              
             </div>
           </div>
+
+          <div className='footer'>
+            <div>
+              <Link className='arknights-link' href='https://www.arknights.global/' target='_blank'>
+                Arknights
+              </Link>
+              <span> by </span>
+              <Link className='arknights-link' href='https://www.hypergryph.com/' target='_blank'>
+                HyperGryph
+              </Link>
+              <span> and </span> 
+              <Link className='arknights-link' href='https://www.yo-star.com/' target='_blank'>
+                Yostar
+              </Link>
+            </div>
+            <div>
+              <span>Operators data from  </span>
+              <Link className='arknights-link' href='https://github.com/Aceship/AN-EN-Tags' target='_blank'>
+                Aceship@GitHub
+              </Link>
+            </div>
+          </div>
+
         </div>
       </ThemeProvider>     
     );
