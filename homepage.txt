@@ -1,0 +1,1 @@
+  "homepage": "https://lloyd-san.github.io/arknights/",
