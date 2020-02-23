@@ -23,7 +23,7 @@ const TAG_TRANSLATIONS = [
   },
   {
     chinese: '费用回复',
-    english: 'DP-Revoery'
+    english: 'DP-Recovery'
   },
   {
     chinese: '输出',
@@ -141,6 +141,10 @@ function cleanUp() {
     delete operator.type;
 
     operator.tags = translateTags(operator.tags);
+
+    if (operator.stars === 6) {
+      operator.tags = operator.tags.filter(x => x !== 'Senior Operator');
+    }
   });
 
   console.log(`Adding 'Robot' tag for Lancet-2 and Castle-3.`);
@@ -150,6 +154,16 @@ function cleanUp() {
 
   lancet2.tags.push('Robot');
   castle3.tags.push('Robot');
+
+  console.log(`Fixing weird operator names`);
+
+  let gummy = operators.find(x => x.name === 'ГУМ');
+  let zima = operators.find(x => x.name === 'зима');
+  let istina = operators.find(x => x.name === 'Истина');
+
+  gummy.name = 'Gummy';
+  zima.name = 'Zima';
+  istina.name = 'Istina';
 
   saveOperatorsJson(operators);
 }

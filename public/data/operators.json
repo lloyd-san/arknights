@@ -68,7 +68,7 @@
     "name": "Fang",
     "tags": [
       "Melee",
-      "DP-Revoery",
+      "DP-Recovery",
       "Vanguard"
     ],
     "stars": 3
@@ -77,7 +77,7 @@
     "name": "Vanilla",
     "tags": [
       "Melee",
-      "DP-Revoery",
+      "DP-Recovery",
       "Vanguard"
     ],
     "stars": 3
@@ -87,7 +87,7 @@
     "tags": [
       "Melee",
       "DPS",
-      "DP-Revoery",
+      "DP-Recovery",
       "Vanguard"
     ],
     "stars": 3
@@ -178,7 +178,7 @@
     "name": "Scavenger",
     "tags": [
       "Melee",
-      "DP-Revoery",
+      "DP-Recovery",
       "DPS",
       "Vanguard"
     ],
@@ -189,7 +189,7 @@
     "tags": [
       "Melee",
       "DPS",
-      "DP-Revoery",
+      "DP-Recovery",
       "Vanguard"
     ],
     "stars": 4
@@ -357,7 +357,7 @@
     "stars": 4
   },
   {
-    "name": "ГУМ",
+    "name": "Gummy",
     "tags": [
       "Melee",
       "Defense",
@@ -380,18 +380,18 @@
     "tags": [
       "Crowdcontrol",
       "Melee",
-      "DP-Revoery",
+      "DP-Recovery",
       "Senior Operator",
       "Vanguard"
     ],
     "stars": 5
   },
   {
-    "name": "зима",
+    "name": "Zima",
     "tags": [
       "Support",
       "Melee",
-      "DP-Revoery",
+      "DP-Recovery",
       "Senior Operator",
       "Vanguard"
     ],
@@ -536,7 +536,7 @@
     "stars": 5
   },
   {
-    "name": "Истина",
+    "name": "Istina",
     "tags": [
       "Ranged",
       "Slow",
@@ -628,9 +628,8 @@
     "name": "Siege",
     "tags": [
       "Melee",
-      "DP-Revoery",
+      "DP-Recovery",
       "DPS",
-      "Senior Operator",
       "Top Operator",
       "Vanguard"
     ],
@@ -642,7 +641,6 @@
       "Ranged",
       "Support",
       "Healing",
-      "Senior Operator",
       "Top Operator",
       "Medic"
     ],
@@ -654,7 +652,6 @@
       "Ranged",
       "Healing",
       "Support",
-      "Senior Operator",
       "Top Operator",
       "Medic"
     ],
@@ -666,7 +663,6 @@
       "Ranged",
       "AoE",
       "Debuff",
-      "Senior Operator",
       "Top Operator",
       "Caster"
     ],
@@ -677,7 +673,6 @@
     "tags": [
       "Ranged",
       "DPS",
-      "Senior Operator",
       "Top Operator",
       "Sniper"
     ],
@@ -689,7 +684,6 @@
       "Melee",
       "DPS",
       "Support",
-      "Senior Operator",
       "Top Operator",
       "Guard"
     ],
@@ -701,7 +695,6 @@
       "Melee",
       "DPS",
       "Defense",
-      "Senior Operator",
       "Top Operator",
       "Defender"
     ],
@@ -714,7 +707,6 @@
       "Support",
       "Defense",
       "Healing",
-      "Senior Operator",
       "Top Operator",
       "Defender"
     ],

@@ -2,13 +2,13 @@ import React, { PureComponent } from 'react';
 
 import { 
   ThemeProvider,
-  Paper,
   Table,
   TableBody,
   TableRow,
   TableCell,
   TableContainer,
-  Button
+  Button,
+  Link
 } from '@material-ui/core';
 import { createMuiTheme } from '@material-ui/core/styles';
 
@@ -42,10 +42,12 @@ const TAGS = [
     name: 'Affix',
     tags: [
       'Healing', 'Support', 'DPS', 'AoE', 'Slow', 'Survival', 'Defense', 'Debuff', 'Shift', 
-      'Crowd Control', 'Nuker', 'Summon', 'Fast-Redeploy', 'DP-Recovery', 'Robot'
+      'Crowdcontrol', 'Nuker', 'Summon', 'Fast-Redeploy', 'DP-Recovery', 'Robot'
     ].sort()
   }
-]
+];
+
+const MAX_TAGS = 7;
 
 class App extends PureComponent {
   constructor(props, context) {
@@ -82,7 +84,7 @@ class App extends PureComponent {
     if (selectedTags.includes(clickedTag)) {
       selectedTags = selectedTags.filter(tag => tag !== clickedTag);
     }
-    else {
+    else if (selectedTags.length < MAX_TAGS) {
       selectedTags.push(clickedTag);
     }
 
@@ -97,9 +99,20 @@ class App extends PureComponent {
     
     let results = [];
     tagCombinations.forEach(combination => {
+      let qualificationFilter = (op) => { return op.stars !== 6 };
+      if (combination.includes('Starter')) {
+        qualificationFilter = (op) => { return op.stars === 2};
+      }
+      else if (combination.includes('Senior Operator')) {
+        qualificationFilter = (op) => { return op.stars === 5};
+      }
+      else if (combination.includes('Top Operator')) {
+        qualificationFilter = (op) => { return op.stars === 6};
+      }
+
       let combinationOperators = operators.filter(op => {
         for (let i = 0; i < combination.length; i++) {
-          if (!op.tags.includes(combination[i])) {
+          if (!qualificationFilter(op) || !op.tags.includes(combination[i])) {
             return false;
           }
         }
@@ -107,13 +120,85 @@ class App extends PureComponent {
         return true;
       });
 
+      let maxStars = 1;
+      let minStars = 6;
+
+      combinationOperators.forEach(op => {
+        if (op.stars > maxStars) {
+          maxStars = op.stars;
+        }
+        
+        if (op.stars < minStars) {
+          minStars = op.stars;
+        }
+      });
+
       let combinationResults = {
         name: combination.join(' + '),
-        operators: combinationOperators
+        operators: combinationOperators.sort((a, b) => {
+          if (a.stars > b.stars) {
+            return -1;
+          }
+          else if (a.stars < b.start) {
+            return 1;
+          }
+          else {
+            if (a.name > b.name) {
+              return 1;
+            }
+            else if (a.name < b.name) {
+              return -1;
+            }
+            else {
+              return 0;
+            }
+          }
+        }),
+        maxStars: maxStars,
+        minStars: minStars
       };
 
       results.push(combinationResults);
     });
+
+    results = results.sort((a, b) => {
+      let singleOpA = a.operators.length === 1;
+      let singleOpB = b.operators.length === 1
+      
+      if (singleOpA && !singleOpB) {
+        return -1
+      }
+      else if (!singleOpA && singleOpB) {
+        return 1;
+      }
+      else {
+        if (a.maxStars > b.maxStars) {
+          return -1;
+        }
+        else if (a.maxStars < b.maxStars) {
+          return 1;
+        }
+        else {
+          if (a.minStars > b.minStars) {
+            return -1;
+          }
+          else if (a.minStars > b.minStars) {
+            return 1;
+          }
+          else {
+            if (a.operators.length > b.operators.length) {
+              return 1;
+            }
+            else if (a.operators.length < b.operators.length) {
+              return -1;
+            }
+            else {
+              return 0;
+            }
+          }
+        }  
+      }
+    })
 
     this.setState({ calculateOperators: results });
 
@@ -173,6 +258,7 @@ class App extends PureComponent {
                         return null;
                       }
 
+
                       return (
                         <TableRow key={combination.name}>
                           <TableCell className='tags-table-cell tags-table-category'>
@@ -181,14 +267,19 @@ class App extends PureComponent {
                           <TableCell className='tags-table-cell'>
                             {
                               combination.operators.map(op => {
+                                let gamepressUrl = `https://gamepress.gg/arknights/operator/${op.name.toLowerCase()}`
+
                                 return (
                                   <Button 
                                     key={op.name}
                                     className='tag-button' 
                                     variant={'contained'} 
-                                    color='primary'
+                                    style={{ backgroundColor: starsToColor(op.stars) }}
+                                    color='#ff0000'
+                                    href={gamepressUrl}
+                                    target='_blank'
                                   >
-                                    {op.name}
+                                    {op.name}                                      
                                   </Button>
                                 )
                               })
@@ -245,6 +336,25 @@ function permutations(array) {
       return 0;
     }
   });
+}
+
+function starsToColor(stars) {
+  switch (stars) {
+    case 1:
+      return '#eaeaea';
+    case 2:
+      return '#dae336';
+    case 3: 
+      return '#00b7ff';
+    case 4:
+      return '#cabccd';
+    case 5:
+      return '#e0cd8d';
+    case 6:
+      return '#d48e26';
+    default: 
+      return '#eaeaea';
+  }
 }
 
 export default App;
