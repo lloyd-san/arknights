@@ -248,6 +248,13 @@ class App extends PureComponent {
                 </Table>
               </TableContainer>              
             </div>
+            
+            <h1>
+              {
+                this.state.selectedTags.length > 0 ? 'Arknights Recruitment Calculator' : 'Selected tags'
+              }
+            </h1>
+            
             <div className='tags-area'>
               <TableContainer>
                 <Table>

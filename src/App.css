@@ -8,10 +8,11 @@
 }
 
 div.content {
+  box-sizing: border-box;
   width: 90%;
-  max-width: 800px;
+  max-width: 1000px;
   padding: 20px 80px;
-  margin-top: 40px;
+  margin-top: 20px;
   margin-bottom: 20px;  
   margin-left: auto;
   margin-right: auto;
@@ -32,6 +33,10 @@ td.tags-table-cell {
   padding: 4px;
 }
 
+td.tags-header-cell {
+  display: block;
+}
+
 button.tag-button, a.tag-button {
   margin: 4px 6px;
   text-decoration: none;
@@ -47,4 +52,10 @@ a.arknights-link {
 
 a.arknights-link:hover {
   color: #22bbff
+}
+
+@media only screen and (max-width: 600px) {
+  div.content {
+    padding: 10px;
+  }
 }
