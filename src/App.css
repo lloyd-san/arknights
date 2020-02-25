@@ -54,8 +54,31 @@ a.arknights-link:hover {
   color: #22bbff
 }
 
-@media only screen and (max-width: 600px) {
+.clear-button-container {
+  margin-top: 12px;
+  text-align: right;
+}
+
+@media only screen and (max-width: 800px) {
   div.content {
     padding: 10px;
+  }
+
+  .tags-table th, .tags-table td {
+    float: left;
+    width: 100%;
+    text-align: center;
+  }
+
+  td.tags-table-category {
+    text-align: center;
+  }
+
+  td.tags-table-cell {
+    text-align: center;
+  }
+
+  .clear-button-container {
+    text-align: center;
   }
 }

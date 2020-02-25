@@ -91,6 +91,10 @@ class App extends PureComponent {
     this.setState({ selectedTags: selectedTags }, this.calculateOperators);
   }
 
+  onClear = () => {
+    this.setState({ selectedTags: [], calculateOperators: [] });
+  }
+
   calculateOperators = () => {
     let operators = this.state.operators;
     let selectedTags = this.state.selectedTags;
@@ -214,7 +218,7 @@ class App extends PureComponent {
 
             <div className='tags-area'>
               <TableContainer>
-                <Table>
+                <Table className='tags-table'>
                   <TableBody>
                   {
                     TAGS.map(tagCategory => {
@@ -249,15 +253,23 @@ class App extends PureComponent {
               </TableContainer>              
             </div>
             
-            <h1>
+            <div className='clear-button-container'>
+              <Button color='primary' variant='outlined' onClick={this.onClear}>
+                Clear tags
+              </Button>
+            </div>
+
+            <h1>Operators</h1>
+
+            <h3>
               {
-                this.state.selectedTags.length > 0 ? 'Arknights Recruitment Calculator' : 'Selected tags'
+                this.state.selectedTags.length > 0 ? null : 'Select at least one tag'
               }
-            </h1>
+            </h3>
             
             <div className='tags-area'>
               <TableContainer>
-                <Table>
+                <Table className='tags-table'>
                   <TableBody>
                   {
                     this.state.calculateOperators.map(combination => {
@@ -282,7 +294,6 @@ class App extends PureComponent {
                                     className='tag-button' 
                                     variant={'contained'} 
                                     style={{ backgroundColor: starsToColor(op.stars) }}
-                                    color='#ff0000'
                                     href={gamepressUrl}
                                     target='_blank'
                                   >
@@ -320,6 +331,12 @@ class App extends PureComponent {
               <span>Operators data from  </span>
               <Link className='arknights-link' href='https://github.com/Aceship/AN-EN-Tags' target='_blank'>
                 Aceship@GitHub
+              </Link>
+            </div>
+            <div>
+              <span>Source and contact at </span>
+              <Link className='arknights-link' href='https://github.com/lloyd-san/arknights' target='_blank'>
+                Lloyd-san@Github/Arknights
               </Link>
             </div>
           </div>
