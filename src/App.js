@@ -103,8 +103,11 @@ class App extends PureComponent {
     
     let results = [];
     tagCombinations.forEach(combination => {
-      let qualificationFilter = (op) => { return op.stars !== 6 };
-      if (combination.includes('Starter')) {
+      let qualificationFilter = (op) => { return op.stars !== 1 && op.stars !== 6};
+      if (combination.includes('Robot')) {
+        qualificationFilter = (op) => { return op.stars === 1};
+      }
+      else if (combination.includes('Starter')) {
         qualificationFilter = (op) => { return op.stars === 2};
       }
       else if (combination.includes('Senior Operator')) {
